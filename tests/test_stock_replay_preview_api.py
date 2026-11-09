@@ -6,15 +6,15 @@ import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
-from app.usecases.projections import StockBalanceProjector
+from app.application.projections import StockBalanceProjector
 from app.domain.entities import Location, StockBalance
 from app.domain.events import StockReceived
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockBalanceRepository,
     InMemoryStockEventRepository,
 )
-from app.presentation.routers.stock import create_router
+from app.presentation.routers.stocks import create_router
 
 
 @pytest.fixture

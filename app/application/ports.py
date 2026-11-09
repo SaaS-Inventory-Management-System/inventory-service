@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from uuid import UUID
 
-from .entities import Location, StockBalance
-from .events import StockEvent
+from ..domain.entities import Location, StockBalance
+from ..domain.events import StockEvent
 
 class LocationRepository(ABC):
     @abstractmethod

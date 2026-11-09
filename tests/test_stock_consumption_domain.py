@@ -7,11 +7,11 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.projections import StockBalanceProjector
+from app.application.projections import StockBalanceProjector
 from app.domain.entities import StockBalance
 from app.domain.errors import InsufficientStockError
 from app.domain.events import StockConsumed, StockReceived
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryStockEventRepository,
 )
 

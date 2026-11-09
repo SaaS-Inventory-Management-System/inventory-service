@@ -4,13 +4,13 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.stock_balance import GetStockHistory
+from app.application.usecases.stock_balances import GetStockHistory
 from app.domain.entities import Location
 from app.domain.errors import LocationNotFoundError
 from app.domain.events import StockConsumed
 from app.domain.events import StockReceived
 from app.domain.events import StockTransferred
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockEventRepository,
 )

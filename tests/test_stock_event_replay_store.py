@@ -3,7 +3,7 @@ from decimal import Decimal
 from uuid import uuid4
 
 from app.domain.events import StockConsumed, StockReceived, StockTransferred
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryStockEventRepository,
 )
 

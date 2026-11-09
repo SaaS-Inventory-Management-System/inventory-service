@@ -3,7 +3,7 @@
 from uuid import uuid4
 
 from app.domain.entities import Location
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
 )
 

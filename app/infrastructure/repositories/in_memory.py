@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from app.domain.ports import LocationRepository, StockEventRepository, StockBalanceRepository
+from app.application.ports import LocationRepository, StockEventRepository, StockBalanceRepository
 from app.domain.entities import Location, StockBalance
 from app.domain.events import StockEvent, StockTransferred
 

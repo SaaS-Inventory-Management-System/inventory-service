@@ -1,5 +1,5 @@
 from decimal import Decimal
-from uuid import UUID, uuid4
+from uuid import UUID
 
 from app.domain.entities import StockBalance
 from app.domain.events import (
@@ -9,7 +9,7 @@ from app.domain.events import (
     StockTransferred,
     StockAdjusted
 )
-from app.domain.ports import (
+from app.application.ports import (
     StockEventRepository, 
     StockBalanceRepository, 
     LocationRepository
@@ -17,7 +17,7 @@ from app.domain.ports import (
 from app.domain.errors import (
     LocationNotFoundError,
 )
-from .projections import StockBalanceProjector
+from ..projections import StockBalanceProjector
 
 class GetStockBalance:
     def __init__(

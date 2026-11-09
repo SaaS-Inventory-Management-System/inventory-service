@@ -2,7 +2,7 @@ from uuid import UUID, uuid4
 
 import pytest
 
-from app.usecases.location import (
+from app.application.usecases.locations import (
     CreateLocation,
     GetLocation,
     ListLocations,
@@ -10,7 +10,7 @@ from app.usecases.location import (
     UpdateLocation,
 )
 from app.domain.errors import LocationAlreadyExistsError, LocationNotFoundError
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
 )
 

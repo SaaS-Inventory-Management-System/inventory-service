@@ -10,20 +10,20 @@ from app.domain.events import (
     StockReceived,
     StockAdjusted
 )
-from app.usecases.stock_event import (
+from app.application.usecases.stock_events import (
     ReceiveStock,
     ConsumeStock,
     TransferStock,
     AdjustStock
 )
-from app.usecases.stock_balance import (
+from app.application.usecases.stock_balances import (
     GetStockBalance,
     ListStockBalances,
     GetStockHistory,
     RebuildStockBalances
 )
-from app.usecases.projections import StockBalanceProjector
-from app.domain.ports import (
+from app.application.projections import StockBalanceProjector
+from app.application.ports import (
     LocationRepository,
     StockBalanceRepository,
     StockEventRepository

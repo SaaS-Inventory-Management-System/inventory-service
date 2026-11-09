@@ -9,7 +9,7 @@ from app.domain.events import (
     StockTransferred,
     StockAdjusted
 )
-from app.domain.ports import (
+from app.application.ports import (
     StockEventRepository, 
     StockBalanceRepository, 
     LocationRepository
@@ -17,7 +17,7 @@ from app.domain.ports import (
 from app.domain.errors import (
     LocationNotFoundError,
 )
-from .projections import StockBalanceProjector
+from ..projections import StockBalanceProjector
 
 class ReceiveStock:
     def __init__(

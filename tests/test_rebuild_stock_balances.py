@@ -4,17 +4,17 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.stock_event import (
+from app.application.usecases.stock_events import (
     ConsumeStock,
     ReceiveStock,
     TransferStock,
 )
-from app.usecases.stock_balance import RebuildStockBalances
-from app.usecases.projections import StockBalanceProjector
+from app.application.usecases.stock_balances import RebuildStockBalances
+from app.application.projections import StockBalanceProjector
 from app.domain.entities import Location, StockBalance
 from app.domain.errors import InsufficientStockError
 from app.domain.events import StockConsumed, StockReceived
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockBalanceRepository,
     InMemoryStockEventRepository,

@@ -1,7 +1,7 @@
 from uuid import UUID, uuid4
 
 from app.domain.entities import Location
-from app.domain.ports import LocationRepository, StockBalanceRepository
+from app.application.ports import LocationRepository, StockBalanceRepository
 
 from app.domain.errors import (
     LocationNotFoundError, 

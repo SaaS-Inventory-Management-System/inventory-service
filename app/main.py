@@ -2,14 +2,14 @@ from fastapi import FastAPI
 
 from app.presentation.routers.health import router as health_router
 from app.presentation.routers.locations import create_router as create_locations_router
-from app.presentation.routers.stock import create_router as create_stock_router
+from app.presentation.routers.stocks import create_router as create_stock_router
 
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockBalanceRepository,
     InMemoryStockEventRepository
 )
-from usecases.projections import StockBalanceProjector
+from app.application.projections import StockBalanceProjector
 
 
 app = FastAPI(title="Inventory Service")

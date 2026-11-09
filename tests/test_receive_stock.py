@@ -3,11 +3,11 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.stock_event import ReceiveStock
-from app.usecases.projections import StockBalanceProjector
+from app.application.usecases.stock_events import ReceiveStock
+from app.application.projections import StockBalanceProjector
 from app.domain.entities import Location
 from app.domain.errors import LocationNotFoundError
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockBalanceRepository,
     InMemoryStockEventRepository,

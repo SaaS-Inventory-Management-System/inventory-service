@@ -6,13 +6,13 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.location import DeleteLocation
-from app.usecases.stock_balance import GetStockHistory, RebuildStockBalances
-from app.usecases.projections import StockBalanceProjector
+from app.application.usecases.locations import DeleteLocation
+from app.application.usecases.stock_balances import GetStockHistory, RebuildStockBalances
+from app.application.projections import StockBalanceProjector
 from app.domain.entities import Location, StockBalance
 from app.domain.errors import LocationInUseError, LocationNotFoundError
 from app.domain.events import StockReceived, StockConsumed
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockBalanceRepository,
     InMemoryStockEventRepository

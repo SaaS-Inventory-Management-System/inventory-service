@@ -5,7 +5,7 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.projections import StockBalanceProjector
+from app.application.projections import StockBalanceProjector
 from app.domain.entities import StockBalance
 from app.domain.events import StockAdjusted
 

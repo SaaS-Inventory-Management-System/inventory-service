@@ -5,10 +5,10 @@ from uuid import uuid4
 
 import pytest
 
-from app.usecases.stock_balance import GetStockBalance, ListStockBalances
+from app.application.usecases.stock_balances import GetStockBalance, ListStockBalances
 from app.domain.entities import Location, StockBalance
 from app.domain.errors import LocationNotFoundError
-from app.fakes.repositories import (
+from app.infrastructure.repositories.in_memory import (
     InMemoryLocationRepository,
     InMemoryStockBalanceRepository,
 )

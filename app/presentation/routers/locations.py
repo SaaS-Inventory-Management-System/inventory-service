@@ -9,7 +9,7 @@ from uuid import UUID
 from fastapi import APIRouter, HTTPException
 
 from app.domain.errors import LocationNotFoundError, LocationAlreadyExistsError, LocationInUseError
-from app.usecases.location import (
+from app.application.usecases.locations import (
     GetLocation, 
     CreateLocation,
     ListLocations,
@@ -17,7 +17,7 @@ from app.usecases.location import (
     UpdateLocation,
     DeleteLocation
 )
-from app.domain.ports import LocationRepository, StockBalanceRepository
+from app.application.ports import LocationRepository, StockBalanceRepository
 from app.presentation.schemas import (
     LocationCreateRequest, 
     LocationResponse,
